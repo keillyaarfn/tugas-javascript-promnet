@@ -27,7 +27,7 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // TODO 1: Tulis satu baris console.log() untuk memastikan file app.js sudah terhubung!
 // Contoh output: "Skrip app.js berhasil terhubung!"
 
-
+console.log("Skrip app.js berhasil terhubung!");
 
 
 // ============================================================
@@ -40,7 +40,13 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "namaKasir" (misal: "Kak Eko") dan "shiftKerja" menggunakan "let".
 // 3. Cetak nilai NAMA_KEDAI, namaKasir, dan shiftKerja ke Console menggunakan console.log().
 
+const NAMA_KEDAI = "Kopi PSTI Kampus";
+let namaKasir = "Kak Eko";
+let shiftKerja = "Shift Sore";
 
+console.log("Nama Kedai: " + NAMA_KEDAI);
+console.log("Nama Kasir: " + namaKasir);
+console.log("Shift Kerja: " + shiftKerja);
 
 
 // ---- DEMO PERBEDAAN LET vs CONST ----
@@ -48,7 +54,9 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // Ubah (re-assign) nilai variabel "namaKasir" dengan nama kasir lain,
 // lalu cetak ke Console untuk membuktikan bahwa variabel "let" nilainya dapat diubah.
 
+namaKasir = "Kak Budi";
 
+console.log("Nama Kasir setelah diubah: " + namaKasir);
 
 
 // ---- BAGIAN 2B: INPUT INTERAKTIF & PENGANDAIAN DASAR ----
@@ -59,7 +67,18 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 //    - JIKA namaPelanggan ada isinya: tampilkan alert sapaan dan log ke console.
 //    - JIKA namaPelanggan kosong / klik Cancel: beri nilai default "Pelanggan Setia" dan tampilkan alert pemberitahuan.
 
+alert("Selamat datang di " + NAMA_KEDAI + "!");
 
+let namaPelanggan = prompt("Silakan masukkan nama pelanggan:");
+
+if (namaPelanggan) {
+    alert("Halo, " + namaPelanggan + "! Selamat datang di " + NAMA_KEDAI + ".");
+    console.log("Nama pelanggan: " + namaPelanggan);
+} else {
+    namaPelanggan = "Pelanggan Setia";
+    alert("Nama pelanggan tidak diisi. Anda akan dicatat sebagai " + namaPelanggan + ".");
+    console.log("Nama pelanggan: " + namaPelanggan);
+}
 
 
 // ============================================================
@@ -73,7 +92,17 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "totalPoin" yang menjumlahkan ketiga variabel poin di atas.
 // 3. Cetak rincian perolehan poin dan totalPoin ke Console menggunakan console.log().
 
+let poinKopi = 45;
+let poinMakanan = 35;
+let poinMerchandise = 20;
 
+let totalPoin = poinKopi + poinMakanan + poinMerchandise;
+
+console.log("=== RINCIAN POIN PELANGGAN ===");
+console.log("Poin Kopi: " + poinKopi);
+console.log("Poin Makanan: " + poinMakanan);
+console.log("Poin Merchandise: " + poinMerchandise);
+console.log("Total Poin: " + totalPoin);
 
 
 // ============================================================
@@ -138,6 +167,5 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 
 
 // TODO 6C:
-// Cetak jumlah total menu di akhir daftar menggunakan properti ".length".
+// Cetak jumlah total menu di akhir daftar menggunakan properti ".length". 
 // Akhiri program dengan: console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
-
